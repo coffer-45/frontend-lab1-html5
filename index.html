@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Вовк Андрій Андрійович, ІО-41, лабораторна робота 1, HTML5, Мукачево">
+    <meta name="description" content="Особиста HTML5-сторінка Андрія Вовка: освіта, захоплення, улюблені твори та місто Мукачево.">
+    <title>Вовк А. А. · ІО-41 · Лабораторна №1 · Варіант 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home" aria-label="На початок сторінки">АВ<span class="brand-dot">.</span></a>
+        <nav aria-label="Розділи сторінки">
+          <a href="#about">Про мене</a>
+          <a href="#interests">Захоплення</a>
+          <a href="#city">Місто</a>
+        </nav>
+        <span class="header-note">FE / ЛР 01</span>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero wrap" aria-labelledby="name">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Привіт, я Андрій</p>
+          <h1>Коджу.<br>Досліджую.<br><em>Перезбираю.</em></h1>
+          <p class="hero-lead">Студент групи ІО-41. Люблю знаходити незвичне в інтернеті, писати код і розбиратися, як усе працює.</p>
+          <a class="text-link" href="#about">Познайомитися ближче <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-aside">
+          <span class="aside-index">01 / 03</span>
+          <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p>Про мене, мої інтереси<br>та місто, з якого все почалося.</p>
+        </div>
+      </section>
+
+      <section class="section section-light" id="about" aria-labelledby="about-heading">
+        <div class="wrap section-grid">
+          <div class="section-side"><span class="section-number">01</span><span>Знайомство</span></div>
+          <div class="section-main">
+            <p class="section-kicker">Коротка історія</p>
+            <h2 id="about-heading">Вовк Андрій Андрійович</h2>
+            <div class="fact-grid">
+              <div class="fact"><span class="fact-label">Народився</span><p>17 листопада 2006 року<br>в місті Мукачево</p></div>
+              <div class="fact"><span class="fact-label">Освіта</span><p>Закінчив школу №187. Зараз навчаюся в КПІ ім. Ігоря Сікорського, група ІО-41.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="interests" aria-labelledby="interests-heading">
+        <div class="wrap section-grid">
+          <div class="section-side"><span class="section-number">02</span><span>Що мене захоплює</span></div>
+          <div class="section-main">
+            <p class="section-kicker">Поза навчанням</p>
+            <h2 id="interests-heading">Три речі, до яких<br>я повертаюся</h2>
+            <ul class="interest-list">
+              <li><span class="interest-index">01</span><span>Перезбирати систему кожної середи</span><span class="interest-mark" aria-hidden="true">✳</span></li>
+              <li><span class="interest-index">02</span><span>Шукати дивовижну інформацію в інтернеті</span><span class="interest-mark" aria-hidden="true">✳</span></li>
+              <li><span class="interest-index">03</span><span>Кодити й пробувати нові ідеї</span><span class="interest-mark" aria-hidden="true">✳</span></li>
+            </ul>
+
+            <div class="works">
+              <div><p class="section-kicker">Улюблені фільм та аніме</p><h3>Історії, які запам’яталися</h3></div>
+              <ol>
+                <li><span>Той, хто біжить по лезу 2049</span><small>фільм</small></li>
+                <li><span>Орбіта: Про рух Землі</span><small>аніме</small></li>
+                <li><span>Родом із Безодні</span><small>аніме</small></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-city" id="city" aria-labelledby="city-heading">
+        <div class="wrap section-grid">
+          <div class="section-side"><span class="section-number">03</span><span>Улюблене місто</span></div>
+          <div class="section-main">
+            <p class="section-kicker">Місто, де я народився</p>
+            <h2 id="city-heading">Мукачево<span class="period">.</span></h2>
+            <p class="city-copy">Мукачево мені подобається своїм затишним центром, старими вулицями й особливою атмосферою Закарпаття. Це місто, до якого приємно повертатися: тут знайомі місця щоразу нагадують про дім.</p>
+            <figure>
+              <a class="city-photo" href="https://mukachevo-rada.gov.ua/" target="_blank" rel="noopener noreferrer" aria-label="Фото центру Мукачева. Відкрити офіційний сайт міста">
+                <img src="mukachevo-center.jpg" alt="Центральна площа Мукачева з ратушею" width="1050" height="700">
+                <span class="photo-action">Відкрити сайт міста <span aria-hidden="true">↗</span></span>
+              </a>
+              <figcaption>Центр Мукачева. Фото: <a href="https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%BA%D0%B0%D1%87%D0%B5%D0%B2%D0%BE%2C_%D1%86%D0%B5%D0%BD%D1%82%D1%80.jpg">Петро Паровінчак / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Зображення не змінено.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><div class="wrap footer-inner"><span>Вовк Андрій Андрійович</span><span>ІО-41 · Лабораторна №1 · Варіант 3</span></div></footer>
+  </body>
+</html>
