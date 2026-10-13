@@ -15,6 +15,7 @@
 - `mukachevo-center.jpg` — фотографія міста;
 - `lab1.typ` — вихідний код звіту;
 - `lab1.pdf` — звіт;
+- `letterhead.png` — графіка титульної сторінки звіту;
 - `page-screenshot.png` — скриншот сторінки для звіту.
 - `hero-screenshot.png` — скриншот першого екрана у звіті.
 

@@ -1,78 +1,128 @@
-#set page(paper: "a4", margin: (left: 24mm, right: 20mm, top: 21mm, bottom: 20mm))
-#set text(font: "DejaVu Sans", size: 10pt, lang: "uk")
-#set par(justify: true, leading: 0.65em)
-#set heading(numbering: none)
+#set page(
+  paper: "a4",
+  margin: (x: 1.6cm, y: 2cm),
+  numbering: none,
+)
 
-#let repo-url = "https://github.com/coffer-45/frontend-lab1-html5/tree/main"
-#let site-url = "https://coffer-45.github.io/frontend-lab1-html5/"
+#set text(
+  font: "New Computer Modern",
+  lang: "uk",
+  size: 12pt,
+)
 
 #align(center)[
-  *Національний технічний університет України* \
-  *«Київський політехнічний інститут імені Ігоря Сікорського»* \
+  #image("letterhead.png", width: 70%)
+  #v(0.5cm)
+
+  Національний технічний університет України \
+  «Київський політехнічний інститут імені Ігоря Сікорського»
+
+  #v(0.1cm)
+  Факультет інформатики та обчислювальної техніки \
   Кафедра інформаційних систем та технологій
 ]
 
-#v(34mm)
+#v(1fr)
+
 #align(center)[
-  #text(size: 19pt, weight: "bold")[ЗВІТ]
-  #v(4mm)
-  #text(size: 13pt)[до лабораторної роботи №1]
-  #v(3mm)
-  з дисципліни «Основи FE-технологій» \
-  на тему «Мова гіпертекстової розмітки сайту HTML-5»
+  #text(size: 22pt, weight: 300)[Основи FE-технологій] \
+  #v(0.3cm)
+  #text(size: 20pt, weight: 300)[Лабораторна робота №1] \
+  «Мова гіпертекстової розмітки сайту HTML-5»
 ]
 
-#v(30mm)
+#v(1fr)
+
 #align(right)[
-  Виконав: студент групи ІО-41 \
-  *Вовк Андрій Андрійович* \
+  Виконав: студент ФІОТ, гр. ІО-41 \
+  #emph[Вовк А. А.] \
+  Залікова книжка № 4103 \
   Варіант 3
 ]
 
 #v(1fr)
-#align(center)[Київ — 2026]
+
+#align(center)[Київ --- 2026]
 
 #pagebreak()
 
-= Мета роботи
+#set page(numbering: "1", number-align: center + bottom)
+#counter(page).update(1)
 
-Створити особисту вебсторінку засобами HTML5, розмістити на ній інформацію про себе, списки захоплень і улюблених творів, опис та фотографію міста. Застосувати Git для збереження коду, опублікувати сторінку через GitHub Pages і перевірити HTML валідатором.
+#underline[*Тема:*] «Мова гіпертекстової розмітки сайту HTML-5».
+#v(0.1cm)
+#underline[*Мета:*] Створити особисту сторінку засобами HTML5, зберегти її код у Git,
+опублікувати на GitHub Pages і перевірити коректність розмітки валідатором.
 
-= Хід роботи
+#v(0.4cm)
+#align(center)[#text(size: 18pt)[*Хід роботи*]]
 
-У файлі `index.html` створено сторінку українською мовою. У секції `head` вказано назву сторінки через `title`, кодування UTF-8, а також метадані `keywords` і `description` через `meta`. У заголовку сторінки розміщено ПІБ автора за допомогою `h2`. Окремо наведено дату й місце народження та освіту.
+Мій номер у загальному списку студентів -- 3, тому у звіті зазначено варіант 3.
+Лабораторна робота №1 не має окремих завдань за варіантами. Для роботи створено
+файли `index.html`, `style.css` та `mukachevo-center.jpg`.
 
-Три захоплення оформлено ненумерованим списком `ul`, а три улюблені твори — нумерованим списком `ol`. Розділ про Мукачево містить опис міста та фотографію. Елемент `img` вкладено в посилання `a`, яке відкриває офіційний сайт Мукачівської міської ради. Для зображення задано альтернативний текст `alt`. Оформлення та адаптацію до вузького екрана винесено у `style.css`.
+#v(0.3cm)
+#align(center)[#underline[*Створення HTML-сторінки*]]
 
-Фотографія: Петро Паровінчак, _«Мукачево, центр»_, Wikimedia Commons, ліцензія CC BY-SA 3.0. Зображення не змінено: #link("https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%BA%D0%B0%D1%87%D0%B5%D0%B2%D0%BE%2C_%D1%86%D0%B5%D0%BD%D1%82%D1%80.jpg")[джерело фотографії].
+У файлі `index.html` задано тип документа HTML5 і українську мову сторінки.
+Елемент `title` містить прізвище та ініціали автора, групу, номер лабораторної
+роботи й варіант. Через `meta` задано кодування UTF-8, ключові слова
+(`keywords`) та опис (`description`).
 
-= Перевірка результату
+На сторінці розміщено прізвище, ім'я та по батькові у заголовку `h2`, дату й місце
+народження, відомості про школу та університет. Захоплення подано ненумерованим
+списком `ul` із трьох пунктів, а улюблені фільм і аніме -- нумерованим списком
+`ol` із трьох пунктів. Окремий розділ присвячено Мукачеву: наведено опис міста
+та його фотографію. Зображення `img` вкладено в посилання `a` на офіційний сайт
+Мукачівської міської ради. Для фотографії задано альтернативний текст `alt`.
 
-Сторінку відкрито в Firefox: текст, списки, фотографія та навігація відображаються. Файли стилів і фотографії підключені відносними шляхами, тому сторінка працює в каталозі GitHub Pages.
-
-HTML перевірено за допомогою #link("https://validator.w3.org/nu/")[W3C Nu Validator]. Під час першої перевірки знайдено одну помилку: атрибут `aria-label` був заданий для `div` без відповідної ролі. Атрибут прибрано; повторна перевірка повернула *0 помилок і 0 попереджень*.
+Стилі сторінки винесено в `style.css`. Завдяки медіазапитам вміст перебудовується
+для вузьких екранів. Для запуску не потрібні сервер або встановлення залежностей:
+достатньо відкрити `index.html` у браузері.
 
 #figure(
-  image("hero-screenshot.png", width: 100%),
-  caption: [Початок сторінки у Firefox; повний скриншот — `page-screenshot.png` у репозиторії],
+  align(center)[#image("hero-screenshot.png", width: 82%)],
+  caption: [Початок сторінки у браузері Firefox],
 )
 
-= Код і публікація
+#pagebreak()
+#align(center)[#underline[*Фотографія та її використання*]]
 
-#if repo-url == "" [Репозиторій GitHub: посилання буде додано після публікації.] else [Репозиторій GitHub: #link(repo-url)[#repo-url].]
+Для сторінки використано фотографію «Мукачево, центр» автора Петра Паровінчака
+з Wikimedia Commons за ліцензією CC BY-SA 3.0. Зображення не змінено.
+На сторінці біля фотографії наведено автора, джерело та ліцензію.
+#link("https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%BA%D0%B0%D1%87%D0%B5%D0%B2%D0%BE%2C_%D1%86%D0%B5%D0%BD%D1%82%D1%80.jpg")[Сторінка фотографії].
 
-#if site-url == "" [Опублікований сайт: посилання буде додано після публікації.] else [Опублікований сайт: #link(site-url)[#site-url].]
+#v(0.3cm)
+#align(center)[#underline[*Перевірка HTML*]]
 
-Для локального запуску достатньо відкрити `index.html` у браузері; сервер, встановлення пакетів і збірка не потрібні. Точні файли коду: `index.html` і `style.css` у корені репозиторію. Зображення зберігається поруч із ними у файлі `mukachevo-center.jpg`.
+Сторінку перевірено в #link("https://validator.w3.org/nu/")[W3C Nu Validator].
+Під час першої перевірки знайдено одну помилку: для елемента `div` було задано
+атрибут `aria-label` без потрібної ролі. Атрибут прибрано. Повторна перевірка
+остаточної версії повернула *0 помилок і 0 попереджень*.
 
-= Використані джерела
+#v(0.3cm)
+#align(center)[#underline[*Публікація*]]
 
-- #link("https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta")[MDN: елемент `meta`] — кодування та метадані сторінки.
-- #link("https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img")[MDN: елемент `img`] — вбудовування зображення та альтернативний текст.
-- #link("https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links")[MDN: створення посилань] — зображення як гіперпосилання.
-- #link("https://validator.w3.org/docs/api.html")[W3C: інтерфейс HTML Checker] — перевірка HTML-документа.
-- #link("https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site")[GitHub Docs: GitHub Pages] — публікація статичної сторінки.
+Код збережено в Git-репозиторії та опубліковано через GitHub Pages.
+Адреса репозиторію: #link("https://github.com/coffer-45/frontend-lab1-html5")[github.com/coffer-45/frontend-lab1-html5].
+Точні посилання на файли: #link("https://github.com/coffer-45/frontend-lab1-html5/blob/main/index.html")[`index.html`]
+та #link("https://github.com/coffer-45/frontend-lab1-html5/blob/main/style.css")[`style.css`].
+Адреса сайту: #link("https://coffer-45.github.io/frontend-lab1-html5/")[coffer-45.github.io/frontend-lab1-html5/].
+Опублікована сторінка, файл стилів і фотографія відкриваються з кодом HTTP 200.
 
-= Висновок
+#v(0.3cm)
+#align(center)[#underline[*Використані джерела*]]
 
-Створено особисту HTML5-сторінку з обов’язковими метаданими, біографічною інформацією, списками та фотографією міста. HTML пройшов повторну перевірку валідатором без повідомлень.
+- #link("https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta")[MDN: елемент `meta`] -- кодування та метадані сторінки.
+- #link("https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img")[MDN: елемент `img`] -- зображення й альтернативний текст.
+- #link("https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links")[MDN: створення посилань] -- зображення як гіперпосилання.
+- #link("https://validator.w3.org/docs/api.html")[W3C: HTML Checker] -- перевірка HTML.
+- #link("https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site")[GitHub Docs: GitHub Pages] -- публікація сайту.
+
+#v(0.3cm)
+#align(center)[#text(size: 18pt)[*Висновок*]]
+
+Створено особисту HTML5-сторінку з метаданими, інформацією про автора,
+списками захоплень і улюблених творів та фотографією міста. Сторінку
+опубліковано на GitHub Pages. Фінальна перевірка HTML завершилася без повідомлень.
