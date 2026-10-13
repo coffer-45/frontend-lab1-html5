@@ -3,8 +3,8 @@
 #set par(justify: true, leading: 0.65em)
 #set heading(numbering: none)
 
-#let repo-url = ""
-#let site-url = ""
+#let repo-url = "https://github.com/coffer-45/frontend-lab1-html5/tree/main"
+#let site-url = "https://coffer-45.github.io/frontend-lab1-html5/"
 
 #align(center)[
   *Національний технічний університет України* \
